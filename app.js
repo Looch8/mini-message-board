@@ -6,6 +6,10 @@ const path = require("path");
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
 
+// To include css files
+const assetsPath = path.join(__dirname, "public");
+app.use(express.static(assetsPath));
+
 const description = "This is the message board";
 
 app.get("/", (req, res) => {
