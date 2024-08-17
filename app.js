@@ -37,11 +37,9 @@ app.get("/new", (req, res) => {
 	res.render("form");
 });
 
-// New message router
-
-// app.get("/new", (req, res) => {
-// 	res.render("");
-// });
+app.post("/new", (req, res) => {
+	res.send("POST request to /new");
+});
 
 app.listen(port, () => {
 	console.log(`App listening on port ${port}`);
