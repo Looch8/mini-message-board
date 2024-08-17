@@ -26,7 +26,11 @@ const messages = [
 ];
 
 app.get("/", (req, res) => {
-	res.render("index", { description: description, messages: messages });
+	res.render("index", {
+		description: description,
+		title: "Mini Messageboard",
+		messages: messages,
+	});
 });
 
 // New message router
