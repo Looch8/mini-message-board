@@ -33,6 +33,10 @@ app.get("/", (req, res) => {
 	});
 });
 
+app.get("/new", (req, res) => {
+	res.render("form");
+});
+
 // New message router
 
 // app.get("/new", (req, res) => {
