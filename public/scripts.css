@@ -1,3 +1,7 @@
 body {
 	color: rgb(26, 27, 133);
 }
+
+.message-container {
+	padding: 20px;
+}

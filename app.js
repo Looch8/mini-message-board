@@ -26,7 +26,7 @@ const messages = [
 ];
 
 app.get("/", (req, res) => {
-	res.render("index", { description: description });
+	res.render("index", { description: description, messages: messages });
 });
 
 // New message router
