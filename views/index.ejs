@@ -6,12 +6,16 @@
 	<body>
 		<h1>Mini Message Board</h1>
 
+		<a href="/new">Add new message</a>
+
 		<h3><%= description %></h3>
 		<ul>
 			<% messages.forEach((message) => { %>
 			<li class="message-container">
 				<h4 class="message-user"><%= message.user %></h4>
-				<p class="message-text"><%= message.text %></p>
+				<p class="message-text">
+					<%= message.text %> <button>Open</button>
+				</p>
 				<p class="message-date"><%= message.added %></p>
 			</li>
 
