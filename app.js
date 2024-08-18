@@ -6,6 +6,9 @@ const path = require("path");
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
 
+// Get and use data from form
+app.use(express.urlencoded({ extended: true }));
+
 // To include css files
 const assetsPath = path.join(__dirname, "public");
 app.use(express.static(assetsPath));
@@ -38,7 +41,12 @@ app.get("/new", (req, res) => {
 });
 
 app.post("/new", (req, res) => {
-	res.send("POST request to /new");
+	const { messageText, messageUser } = req.body;
+
+	messages.push({ text: messageText, user: messageUser });
+
+	// Redirect user back to home page
+	res.redirect("/");
 });
 
 app.listen(port, () => {
