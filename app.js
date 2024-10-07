@@ -8,8 +8,10 @@ app.set("view engine", "ejs");
 
 // Routes
 const indexRoute = require("./routes/indexRoute");
+const newMessageRoute = require("./routes/newMessageRoute");
 
 app.use("/", indexRoute);
+app.use("/new", newMessageRoute);
 
 const PORT = 3000;
 app.listen(PORT, () => {
