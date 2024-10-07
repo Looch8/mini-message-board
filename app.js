@@ -16,6 +16,7 @@ const newMessageRoute = require("./routes/newMessageRoute");
 app.use("/", indexRoute);
 app.use("/new", newMessageRoute);
 app.use("/new", indexRoute);
+app.use("/messages/:message", newMessageRoute);
 
 const PORT = 3000;
 app.listen(PORT, () => {
